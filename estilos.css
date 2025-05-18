@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Faculty Glyphic", sans-serif;
+    color: black;
+}
+
+:root{
+    --Principal: rgb(93 116 124);
+    --Secundario: rgb(139 89 80);
+    --Terciario: rgba(255, 255, 255, 0.5);
+}
+
+body{
+    font-size: 0.9em;
+    background-color: var(--Principal);
+}
+
+h1, h2, h3{
+    font-size: 1.2em;
+}
+
+main a{
+    display: inline-block;
+    background-color: var(--Principal);
+    font-weight: bold;
+    padding: 0.5em 1.5em;
+    border-radius: 25px;
+    color: var(--Terciario);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--Principal);
+    transition: 0.2s;
+}
+
+
+/* === HIDDEN === */
+header nav, #banner p, #info div:nth-of-type(4), #areas article:nth-of-type(n+4) img, h4{
+    display: none;
+}
+
+
+/* === HEADER === */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: var(--Terciario);
+}
+
+#logo{
+    width: 3em;
+    display: block;
+}
+
+#menu{
+    width: 2em;
+    display: block;
+}
+
+
+/* === BANNER === */
+#banner{
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    padding: 2em;
+    height: 35vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+#banner div{
+    background-color: var(--Terciario);
+    padding: 1em;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+/* === FORM === */
+#secForm{
+    padding: 3em;
+}
+
+form{
+    background-color: var(--Secundario);
+    padding: 1em 2.8em;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+form div input, select{
+    border-radius: 8px;
+    background-color: var(--Terciario);
+    border: 0;
+    padding: 0.5em;
+    font-size: 0.7em;
+}
+
+form div input[type="submit"]{
+    background-color: var(--Principal);
+    color: var(--Terciario);
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid var(--Principal);
+    transition: 0.2s;
+}
+
+input::placeholder{
+    color: black;
+}
+
+
+/* === INFO === */
+#info div{
+    background-size: cover;
+    background-position: center;
+    width: 90vw;
+    height: 90vw;
+    background-color: var(--Terciario);
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    align-content: center;
+}
+
+#info div h2{
+    margin-bottom: 1em;
+}
+
+#info div:nth-of-type(1){
+    background-image: url(img/uno.jpg);
+}
+#info div:nth-of-type(2){
+    background-image: url(img/dos.jpg);
+}
+#info div:nth-of-type(5){
+    background-image: url(img/tres.jpg);
+}
+#info div:nth-of-type(6){
+    background-image: url(img/cuatro.jpg);
+}
+
+#info a:hover{
+    background-color: transparent;
+    border: 2px solid var(--Principal);
+    color: var(--Principal);
+}
+
+
+/* === AREAS === */
+#areas{
+    text-align: center;
+    padding: 5em 1.5em;
+}
+
+#areas h2{
+    color: var(--Terciario);
+    font-size: 1.7em;
+}
+
+#areas div{
+        margin: auto;
+        max-width: 450px;
+    }
+
+article{
+    background-color: var(--Secundario);
+    margin: 2em 0;
+    border-radius: 25px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+article img{
+    width: 100%;
+    border-radius: 20px;
+    height: 35vh;
+    object-fit: cover;
+}
+
+
+article a:hover, form div input[type="submit"]:hover{
+    background-color: transparent;
+    border: 2px solid var(--Terciario);
+    color: var(--Terciario);
+}
+
+
+/* === FOOTER === */
+footer{
+    background-color: var(--Secundario);
+    font-size: 1.4em;
+    align-items: center;
+    padding: 0.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+footer div{
+    display: flex;
+    gap: 0.7em;
+}
+
+footer img{
+    width: 1.4em;
+    display: block;
+}
+
+
+
+/* === TABLET === */
+@media all and (min-width:768px){
+
+    /* === HIDDEN === */
+    #menu{
+        display: none;
+    }
+
+    /* === SHOW === */
+    header nav, #info div:nth-of-type(4){
+        display: block;
+    }
+
+    
+    main{
+        font-size: 1.1em;
+    }
+
+
+    /* === HEADER === */
+    header nav a{
+        padding-left: 2em;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    header nav a:hover{
+        color: var(--Secundario);
+    }
+
+    /* === BANNER === */
+    #banner{
+        justify-content: left;
+    }
+
+    /* === FORM === */
+    form{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    form div{
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    form div input, select{
+        flex-grow: 1;
+    }
+
+    /* === INFO === */
+    #info{
+        display: grid;
+        grid-template-columns: repeat(2, 45vw);
+        grid-template-rows: repeat(4, 45vw);
+        justify-content: center;
+    }
+
+    #info div{
+        width: 45vw;
+        height: 45vw;
+    }
+
+    #info div:nth-of-type(3){
+        grid-row: 1/3;
+        grid-column: 2/3;
+        height: auto;
+    }
+    #info div:nth-of-type(4){
+        grid-column: span 2;
+        width: auto;
+        background-color: var(--Secundario);
+        text-align: left;
+        align-content: end;
+    }
+
+    /* === AREAS === */
+    #areas{
+        text-align: left;
+        padding: 4em;
+    }
+
+    #areas div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr 1fr 1fr;
+        gap: 2em;
+        margin-top: 2em;
+        max-width: 850px;
+    }
+
+    #areas article{
+        margin: 0;
+        align-items: start;
+    }
+
+    #areas article:nth-of-type(3){
+        grid-row: span 2;
+    }
+
+    /* === FOOTER === */
+    footer{
+        justify-content: end;
+        padding: 2em;
+        flex-direction: row;
+        gap: 2em;
+    }
+}
+
+
+/* === LAPTOP === */
+@media all and (min-width:1200px){
+
+    /* === SHOW === */
+    #banner p, #areas article:nth-of-type(n+4) img, h4{
+        display: block;
+    }
+
+    body{
+        font-size: 1.2em;
+    }
+
+
+    /* === HEADER === */
+    header{
+        padding: 1em 4em;
+    }
+
+    /* === BANNER === */
+    #banner{
+        height: 70vh;
+        padding: 3em 6em;
+    }
+
+    #banner div{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    /* === FORM === */
+    #secForm{
+        position: relative;
+    }
+
+    form{
+        width: 30vw;
+        position: absolute;
+        top: -9.5em;
+        right: 6em;
+    }
+
+    form div{
+        flex-direction: column;
+        gap: 0.3em;
+    }
+
+    /* === INFO === */
+    #info{
+        grid-template-columns: repeat(4, 25vw);
+        grid-template-rows: repeat(2, 25vw);
+    }
+
+    #info div{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    #info div:nth-of-type(4){
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+
+    /* === AREAS === */
+    #areas div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 3000px;
+    }
+
+    #areas div article{
+        width: 25vw;
+        position: relative;
+    }
+
+    article img{
+        height: 25vh;
+    }
+
+    h4{
+        position: absolute;
+        top: 1.5em;
+        right: 0;
+        background-color: var(--Terciario);
+        padding: 0.5em 1em;
+        width: 45%;
+        text-align: left;
+        border-radius: 25px 0 0 25px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    }
+}
